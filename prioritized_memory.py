@@ -17,7 +17,7 @@ class Memory:  # stored as ( s, a, r, s_ ) in SumTree
 
     def add(self, error, sample):
         p = self._get_priority(error)
-        self.tree.add(p, sample)
+        self.tree.add(p, sample) #STEP 1. 매 transition마다 TD error를 계산하여 relay memory에 
 
     def sample(self, n):
         batch = []
